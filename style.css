@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*:root {
+    --cor-fundo: #f3f3f3;
+    --cor-fundo-secundaria: white;
+    --cor-primaria: #d8dfe8;
+    --cor-secundaria:#0A3871;
+    --cor-terciaria: #495057;
+    --fonte-principal: 'Inter', sans-serif;
+}  
+
+   
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-principal);
+}
+
+body {
+    
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--cor-fundo);
+}
+
+.header {
+    position: relative;
+    padding: 40px;
+    width: 120px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 10%;
+    height: 720px;
+}
+
+.saida {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    width: 35%;
+    background-color: var(--cor-fundo-secundaria);
+    border-radius: 32px;
+}
+
+#mensagemNaoEncontrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    gap: 3%;
+}
+
+.sem-mensagem {
+    height: auto;
+    width: 75%;
+}
+
+.h1SemMensagem {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.pSemMensagem {
+    font-size: 1.0rem;
+    text-align: center;
+}
+
+#textoSaida {
+    font-size: 1.5rem;
+    width: 100%;
+    word-wrap: break-word;
+    padding: 5%;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.entrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+#textoEntrada {
+    color: var(--cor-secundaria);
+    font-size: 2.0rem;
+    height: 90%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.aviso {
+    left:7.3rem;
+    top:32rem;   
+    right: 948px;
+    bottom: 155px;
+    width: 252px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--cor-terciaria);
+
+}
+
+.logo{
+    position: absolute;
+    left: 30px;
+    right: 37.43%;
+    top: 25px;
+    bottom: 0%;
+}
+
+.icone {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    margin: 16px;
+}
+
+.botao {
+    width: 45%;
+    text-align: center;
+    border-radius: 24px;
+    background-color: none;
+    border-color: var(--cor-secundaria);
+    color: var(--cor-secundaria);
+    cursor: pointer;
+    font-size: 1.0rem;
+} 
+
+#criptografar {
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria); 
+}
+
+#copiar {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-fundo-secundaria);    
+    width: 80%;
+    height: 64px;
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-fundo);
+    text-align: center;
+    font-family: inter;
+    font-size: 1.0rem;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .entrada {
+        width: 100%;
+        height: 100%;
+    }
+
+    .saida {
+        height: auto;
+        width: 100%;
+    }
+
+    #mensagemNaoEncontrada {
+        height: 100%;
+        width: 100%;
+        padding: 10%;
+    }
+
+    .sem-mensagem {
+        display: none;
+    }
+
+    #mensagemNaoEncontrada {
+        height: fit-content;
+        width: 100%;
+    }
+
+    #copiar {
+        width: 100%;
+        height: 67px;        
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        flex-direction: column;
+        gap: 2%;
+    }
+
+    .entrada {
+        width: 100%;
+        height: 100%;
+    }
+
+    .saida {
+        height: auto;
+        width: 100%;
+    }
+
+    #mensagemNaoEncontrada {
+        height: 100%;
+        width: 100%;
+        padding: 10%;
+    }
+
+    .sem-mensagem {
+        display: none;
+    }
+
+    #mensagemNaoEncontrada {
+        height: fit-content;
+        width: 100%;
+    }
+
+    #copiar {
+        width: 100%;
+        height: 67px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20%;
+        gap: 20px;
+    }
+
+    #criptografar, #descriptografar {
+        width: 100%;
+        height: 100%;
+    }
+}
